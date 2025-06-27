@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lemonade Stand</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"
+/>
+<link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico" />
+  </head>
+  <body>
+    <script type="text/javascript">//learned from the youtube tutorial - by Coding Snow - https://www.youtube.com/watch?v=VplDlwLTR50
+window.addEventListener("scroll", reveal);
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 150;
+
+    if (revealtop < windowheight - revealpoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}  
+//adding parallax effect to the hero section title
+//learned this from Youtube Tutorial - by Online Tutorials - https://www.youtube.com/watch?v=1wfeqDyMUx4
+
+let titleOne = document.getElementById("title-one");
+let titleTwo = document.getElementById("title-two");
+
+window.addEventListener("scroll", function () {
+  let value = window.scrollY;
+
+  titleOne.style.right = value * 0.5 + "px";
+  titleTwo.style.left = value * 0.5 + "px";
+});
+//adding responsive nav for mobile screens
+//learned this from Youtube Tutorial - by Easy Tutorials - https://www.youtube.com/watch?v=oYRda7UtuhA
+
+function toggleMenu() {
+  var x = document.getElementById("nav-links-sub");
+  if (x.style.left != "0px") {
+    x.style.left = "0px";
+    document.body.style.overflowY = "hidden";
+  } else {
+    x.style.left = "-200px";
+    document.body.style.overflowY = "visible";
+  }
+}
+</script>
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+  <header class="sticky-bg">
+      <nav>
+        <div class="nav-links">
+          <i class="fa fa-bars" onclick="toggleMenu()"></i>
+          <a href="#hero-section" class="hero-link">GTtour </a>
+
+          <div id="nav-links-sub">
+            <ul>
+              <li><a href="#about-us">about</a></li>
+              <li><a href="#our-products">products</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+             </body>
+             </html>
+          </div>
+        </div>
+      </nav>
+    </header
+   Landing Section  -->
+
+    <section id="hero-section">
+      <div class="hero-title">
+        <div class="hero-sub-container-one">
+          <span id="title-one">Ntour</span>
+        </div>
+        <div class="hero-sub-container-two">
+          <img
+            src="assets/images/orange-slice.png"
+            id="orange-slice-1"
+            class="rotate"
+            alt=""
+          />
+          <img
+            src="assets/images/orange-slice.png"
+            id="orange-slice-2"
+            class="rotate"
+            alt=""
+          />
+          <span id="title-two">&a</span>
+        </div>
+      </div>
+    </section>
+<!-- About Us  -->
+
+    <section id="about-us">
+      <div class="about-us-container">
+        <div class="about-us-row reveal">
+          <div class="about-us-col">
+            <h3>about us</h3>
+            <p>
+             Welcome to SHANU Traveling tour, your ultimate window to the world’s most breathtaking destinations!
+
+We are a passionate team of explorers, storytellers, and adventure seekers on a mission to capture the beauty of travel through our lens. From hidden gems to iconic landmarks, cultural experiences to street food adventures — we bring you real, raw, and inspiring stories from around the globe.
+            </p>
+          </div>
+          <div class="about-us-col">
+            <h3>freshly squeezed</h3>
+            <p>
+             Travel is the movement of people between distant geographical locations. Travel can be done by foot, bicycle, automobile, train, boat, bus, airplane, ship or other means, with or without luggage, and can be one way or round trip.[1] Travel can also include relatively short stays between successive movements, as in the case of tourism.
+            </p>
+          </div>
+          <div class="about-us-col">
+            <h3>a call away</h3>
+            <p>
+             📸 Travel tour: Experience destinations through our eyes — full of color, emotion, and life.
+✈️ Travel Tips: Get smart with our practical guides, packing tips, and budget hacks.
+🍲 Local Culture & Food: We dive into local cultures, traditions, and food that define every journey.
+🌄 Adventure Highlights: Hiking, diving, biking — if it’s wild, we’re in!
+
+Our Promise:
+We believe travel should be authentic, inspiring, and accessible to everyone. Whether you're planning your next trip or just love the idea of seeing the world, we’ve got something for you
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Product Section -->
+
+<section id="our-products">
+  <div class="products-grid-wrapper reveal">
+    <div class="products-grid-container">
+      <div class="grid-item">
+        <img src="tour1.png" alt="" />
+        <p>tour 1</p>
+      </div>
+      <div class="grid-item">
+       <img src="tour5.png" alt="">
+        <p>tour2</p>
+      </div>
+      <div class="grid-item">
+        <img src="tour2.png" alt="" />
+        <p>tour3</p>
+      </div>
+      <div class="grid-item">
+        <img src="tour3.png" alt="" />
+        <p>tour4</p>
+      </div>
+      <div class="grid-item">
+        <img src="tour4.png" alt="" />
+        <p>tour 5</p>
+      </div>
+      <div class="grid-item">
+        <img src="tour6.png" alt="" />
+        <p>Tour 6</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Call To Action Section -->
+
+    <section id="contact">
+      <div class="contact-row reveal">
+        <div class="contact-col">
+          <div class="testimonial-wrapper">
+            <p>
+           I’m  a tour guide myself but I can share something that a tour guide told us that he couldn’t believe.
+
+We were hiking a tall mountain (14,240 ft elevation gain) and he is a tour guide for hiking. He is used to dealing with people who have trouble adjusting to the elevation and he deals with those issues very patiently.
+
+He told us that once in his lifetime, he saw a girl do the entire hike in night heels. So now, his motivation for others who are having trouble finishing the hike, is to tell them that if the girl was able to do that hike in high heels, everyone else could do it
+            </p>
+            <br />
+            <p><b>Glen</b> Shanu raj Ceo, Producer, Tourister: )</p>
+            <p> <b> T tour</b> contact me on 011-9599-3181 </p>
+            <p> <b> T tour</b> For any quary @shanu$ </p>
+          </div>
+        </div>
+        <div class="contact-col">
+          <div class="social-icon-wrapper">
+            <a
+              href="https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqazNPNE53ODNBU2otOU9QNWdLX0huYl9fMkpHZ3xBQ3Jtc0treG5HSkNOdEJQejRiME94MC05WmdRNF81Um9KaUkwMjZndERmaHRfWVBta002WUN6Vjhwa24zcUtBb2Nmc29td1JjSVFKZFkzLTlaSXRQZ0hydE9oSlFfOWFKaU4wRklsOFZNZ25IbmRRdkpvRGpwSQ&q=https%3A%2F%2Ftwitter.com%2FRaj98485Raj%2Fstatus%2F1690392005162180608%3Ft%3DgMeDHRZjGjK2xKFfpBApkw%26s%3D19"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img src="assets/images/instagram.png" alt=""
+            /></a>
+            <a href="#contact"
+              ><img src="assets/images/facebook.png" alt=""
+            /></a>
+            <a href="#contact"
+              ><img src="assets/images/twitter.png" alt=""
+            /></a>
+            <a href="#contact"><img src="assets/images/mail.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+
+<section id="footer-section">
+  <div class="footer-row">
+    <p>Copyright &copy; glenpaulson 2022</p>
+    <div class="footer-nav-links">
+      <ul>
+        <li><a href="#hero-section">lemonade stand</a></li>
+        <li><a href="#about-us">about</a></li>
+        <li><a href="#our-products">products</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
